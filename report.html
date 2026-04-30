@@ -61,7 +61,32 @@
         </div>
         <div class="row">
             <p>
-
+                The Tennis Court Facilities – 4326.geojson file contains a feature collection of geometry and properties
+                listing the location of tennis courts in Toronto. The elements within its properties describe the
+                following:
+            </p>
+            <p>
+                Name: A string listing the name of the tennis court <br>
+                Type: A string describing if the tennis court is public or apart of a club <br>
+                Lights: A Yes (Y)/No (N) string element determining if the tennis court is lit or not <br>
+                Court: An integer listing the amount of courts <br>
+                Phone: A string listing the phone number of the tennis court <br>
+                ClubName and ClubWebsite: Both strings list the name and website of the tennis court if it’s apart of a
+                club, otherwise it’s marked as null <br>
+                ClubNote: A string listing any additional info about the club <br>
+                LocationAddress: A string containing the address of the tennis court <br>
+                WinterPlay: A Yes (Y)/No (N) string element determining if the tennis court is open during the winter.
+            </p>
+            <p>
+                In its geometry, the GeoJSON file is of type MultiPoint, meaning a collection of two or more points is
+                represented as a single feature, with the coordinates also included for each tennis court.
+                Comparing the size of the Shapefile to the GeoJSON file, the GeoJSON file is half the size of the
+                Shapefile. This is due to the many files within the Shapefile that is needed to run it, while a GeoJSON
+                is only one. Also, while looking at the Shapefile, new field names in the attribute table can’t be super
+                long compared to a GeoJSON properties table. The advantages of using GeoJSON is that it’s best for
+                webmapping and can be read in html. Spatial and non-spatial properties can be easily connected and
+                mapped. It’s only one file. The disadvantages are that large datasets can cause GeoJSON files to be
+                slow, and it can be inefficient to search through the data.
             </p>
         </div>
     </nav>
