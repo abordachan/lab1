@@ -1,5 +1,5 @@
 # GGR472 Lab 1: Geospatial data for the web
-This repository contains code for an example webpage with a link to a GeoJSON file, as required for Lab 1
+This repository contains code for a webpage with a link to a GeoJSON file, as required for Lab 1
 
 Webpage URL: 
 
