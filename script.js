@@ -1,20 +1,18 @@
-const pointButton = document.getElementById("btn-point");
-const pointCountDisplay = document.getElementById("point-count");
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWJvcmRhY2hhbiIsImEiOiJjbWtkeXBpMncwMWd6M2VwcDF5c2Fkb2ZpIn0.Bzm3BhQq1_A7NtHo0uAXeA'; // Add default public map token from your Mapbox account
 
-// Initialize count variable
-let pointCount = 0;
+const map = new mapboxgl.Map({
+  container: 'my-map', // map container ID
+  style: 'mapbox://styles/abordachan/cmom75ai5009l01s56cbub7vk', // personal style URL
+  center: [-79.3832, 43.6532], // Toronto
+  zoom: 10
+});
 
-// Create an array to represent the point system in tennis
-const points = ["Love", 15, 30, 40, "Game"];
+map.on('load', () => {
+// Add a data source containing GeoJSON data
+  map.addSource('uoft-data', {
+    type: 'geojson',
+    data: {}
+  });
 
-// Use event listeners to track button clicks
-// Increment count variable and update corresponding display elements on webpage
-pointButton.addEventListener("click", () => {
-  pointCount = (pointCount + 1) % points.length;
-  // Whatever pointCount equals is used as an index to find corresponding element in points array
-  pointCountDisplay.innerHTML = points[pointCount];
-  // Create an alert when the point count reaches "Love"
-  if (pointCountDisplay.innerHTML === "Love") {
-    alert("Game, Set, Match!");
-  }
+  
 });
